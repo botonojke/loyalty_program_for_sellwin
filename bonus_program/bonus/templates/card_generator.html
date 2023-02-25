@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Card Generator</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-mKrBOC9woFkU6x3q8BLH2fmD5jgBD5EiMZv7kguKKrLg9Xpg2QRLxohZMCJhZl+70nByBjJgL/4k7T0SfElyYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <h1>Card Generator</h1>
+    <form method="post" action="{% url 'card_generator' %}">
+        {% csrf_token %}
+        <label for="series">Series:</label>
+        <input type="text" name="series" id="series" required class="form-control"><br><br>
+        <label for="number">Number:</label>
+        <input type="text" name="number" id="number" required class="form-control"><br><br>
+        <label for="issue_date">Issue date:</label>
+        <input type="date" name="issue_date" id="issue_date" required class="form-control"><br><br>
+        <label for="end_activity_date">End activity date:</label>
+        <input type="date" name="end_activity_date" id="end_activity_date" required class="form-control"><br><br>
+        <button type="submit" class="btn btn-primary">Generate</button>
+    </form>
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.bundle.min.js" integrity="sha512-6K7Inl5z5SbE29S13vUq3eXKjPyi8OENx+z4v4Q2KPz6wvhKZil7VrELkT2Y7oHrSTlpVuDF/NUdKfntCP3C3w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
+
