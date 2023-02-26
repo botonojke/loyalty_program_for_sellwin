@@ -1,0 +1,8 @@
+DB_USERNAME=sellwin_user
+DB_PASSWORD=pass
+DB_NAME=sellwin_db
+DB_HOST=127.0.0.1
+DB_PORT=5432
+PGADMIN_DEFAULT_EMAIL=admin@myapp.com
+PGADMIN_DEFAULT_PASSWORD=mysecretpassword
+KEY = 'django-insecure-fr2w68nciwt2-rnm%o55%tgmx()7em6lse+uhdxnub7=dr8q(q'
