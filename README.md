@@ -16,7 +16,8 @@
 6. Run migrations by `python manage.py migrate`
 7. Run to create admin user `python manage.py createsuperuser` 
 8. To load the fixture data into the database, run the loaddata management command `python manage.py loaddata bonus_fixture.json`
-9. Open http://localhost:8080/admin/ in browser and auth with user created at step 9
+9. Run server `python manage.py runserver`
+10. Open http://localhost:8080/admin/ in browser and auth with user created at step 9
 
 
 # How to generate a card?
