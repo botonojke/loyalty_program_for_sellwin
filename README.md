@@ -2,7 +2,7 @@
 1. Install Docker https://docs.docker.com/engine/install/
 2. Rename docker-compose_example.yml to docker-compose.yml and dotenv to .env
 3. Run `docker-compose up --build`
-4. Open http://localhost:5050/browser/ with login: `admin@myapp.com` and password: `mysecretpassword`
+4. Open http://localhost:8080/browser/ with login: `admin@myapp.com` and password: `mysecretpassword`
 5. In pgAdmin, click "Add New Server" and fill in the following details:
     ```
     General > Name: Any name you want to give to the server
