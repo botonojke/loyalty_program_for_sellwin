@@ -19,12 +19,18 @@ class Order(models.Model):
         self.card.last_usage_date = timezone.now()
         self.card.save()
 
+    def __str__(self):
+        return f'{self.number} - {self.order_sum}'
+
 
 class Product(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='products')
     name = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     discounted_price = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return f'{self.name}'
 
 
 class Card(models.Model):
@@ -55,7 +61,8 @@ class Card(models.Model):
 
         super(Card, self).save(*args, **kwargs)
 
-
+    def __str__(self):
+        return f'{self.series} {self.number}'
 
     def update_status(self):
         """

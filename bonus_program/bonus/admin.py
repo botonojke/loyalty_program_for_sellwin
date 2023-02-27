@@ -76,8 +76,28 @@ class CardTrashAdmin(admin.ModelAdmin):
     actions = ['recover']
 
 
+class OrderAdmin(admin.ModelAdmin):
+    # Define which fields will be displayed in the list view
+    list_display = ('id', 'date', 'order_sum')
+    # Define which fields will be clickable in the list view
+    list_display_links = ('id',)
+    # Define which fields can be searched in the list view
+    search_fields = ('number', 'date')
+    # Define the available filters in the list view
+    list_filter = ('date',)
+
+
+class ProductAdmin(admin.ModelAdmin):
+    # Define which fields will be displayed in the list view
+    list_display = ('id', 'name', 'price')
+    # Define which fields will be clickable in the list view
+    list_display_links = ('id', 'name')
+    # Define which fields can be searched in the list view
+    search_fields = ('name',)
+
+
 # Register the models and their respective admins
 admin.site.register(Card, CardAdmin)
 admin.site.register(CardTrash, CardTrashAdmin)
-admin.site.register(Order)
-admin.site.register(Product)
+admin.site.register(Order, OrderAdmin)
+admin.site.register(Product, ProductAdmin)
